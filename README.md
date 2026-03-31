@@ -6,7 +6,7 @@
 ![Backend](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 
 ## 📋 Sobre o Projeto
-O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema automatizado com monitoramento centralizado e em tempo real.
+O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema de apoio à decisão com monitoramento centralizado e em tempo real.
 
 > **Finalidade:** Otimizar a rotina administrativa e pedagógica, garantindo que a escala de aulas de cursos como Mecatrônica e ADM esteja sempre correta e acessível a todos.
 
