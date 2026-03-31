@@ -1,42 +1,41 @@
 # SGA - Sistema de Gerenciamento de Ambientes 🏫
 
 ![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-red?style=for-the-badge)
-![Tecnologia](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
-![Platform](https://img.shields.io/badge/.NET%20MAUI-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Linguagem](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+![Frontend](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Backend](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 
 ## 📋 Sobre o Projeto
-O **SGA** é uma solução inteligente para o "quebra-cabeça" acadêmico. Ele substitui processos manuais de alocação de professores e salas por um sistema automatizado e monitoramento em tempo real.
+O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema automatizado com monitoramento centralizado e em tempo real.
 
-> **Finalidade:** Otimizar o tempo da equipe pedagógica e garantir a integridade das informações de enturmação, com foco em uma interface moderna e conectividade mobile para o docente.
+> **Finalidade:** Otimizar a rotina administrativa e pedagógica, garantindo que a escala de aulas de cursos como Mecatrônica e ADM esteja sempre correta e acessível a todos.
 
 ---
 
 ## 🚀 Funcionalidades Principais
 
-* **Painel Administrativo:** Gestão de conflitos de horários e cargas horárias.
-* **Acesso Docente:** Consulta de agenda diária e reporte de incidentes (manutenção).
-* **Painel Visão Geral (Flight Board):** Visualização em tempo real de todas as salas, estilo painel de aeroporto.
+* **Painel Administrativo (Coordenador):** Gestão de conflitos e alocação de turmas.
+* **Portal do Docente:** Consulta de agenda e reporte de incidentes via navegador.
+* **Painel de Visão Geral (Flight Board):** Visualização pública em tempo real das salas e ocupações.
 
 ---
 
-## 🎨 Identidade Visual (Preview)
-O sistema utiliza uma paleta moderna em **Vermelho Escuro**, **Cinza Ardósia** e o **Azul da marca**.
-
-### Exemplo de Visualização (Painel Geral)
+## 🎨 Preview do Painel de Ocupação
 
 | Sala | Horário | Disciplina | Docente | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **Lab 01** | 19:00 - 22:30 | Desenvolvimento de Sistemas | Prof. Augusto | ✅ Alocado |
-| **Sala 05** | 19:00 - 20:40 | Contabilidade Aplicada | Prof. Edilaine | 🛠️ Manutenção |
-| **Auditório** | 21:00 - 22:30 | Palestra Tecnologia | Convidado | ⏳ Próximo |
+| **Lab 01** | 19:00 - 22:30 | Mecatrônica | Prof. Guilherme | ✅ Em Aula |
+| **Lab 02** | 19:00 - 20:40 | Lógica de Programação | Prof. Fabio | ✅ Em Aula |
+| **Sala 05** | 19:00 - 22:30 | Power BI | Profa. Edilaine | 🛠️ Manutenção |
+| **Sala 10** | 21:00 - 22:30 | ADM | Prof. Ronaldo | ⏳ Próximo |
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-* **Linguagem:** C#
-* **Framework:** .NET MAUI (Cross-platform)
-* **Banco de Dados:** SQL Server
-* **Interface:** XAML / CSS
+## 🛠️ Stack Tecnológica
+* **Frontend:** HTML5, CSS3 (Design Moderno Vermelho/Cinza) e JavaScript.
+* **Backend:** C# (ASP.NET Core).
+* **Banco de Dados:** SQL Server.
+* **Arquitetura:** Web Responsiva.
 
 ---
-*Desenvolvido como projeto de conclusão de módulo - ETEC.*
+*Projeto SGA - Desenvolvido para facilitar a rotina administrativa e pedagógica.*
