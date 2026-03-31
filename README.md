@@ -1,21 +1,25 @@
-# SGA - Sistema de Gerenciamento de Ambientes 🏫
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/NOME_DA_IMAGEM.jpeg" alt="Logo SGA" width="400">
+  
+  # SGA - Sistema de Gerenciamento de Ambientes 🏫
+</div>
 
 ![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-red?style=for-the-badge)
 ![Linguagem](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Frontend](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-
+![AVA](https://img.shields.io/badge/Ambiente%20Virtual-AVA-%23003366?style=for-the-badge&logo=google-classroom&logoColor=white)
 
 ## 📋 Sobre o Projeto
-O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema de apoio à decisão com monitoramento centralizado e em tempo real.
+O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema de **apoio à decisão** com monitoramento centralizado e em tempo real.
 
-> **Finalidade:** Otimizar a rotina administrativa e pedagógica, garantindo que a escala de aulas de cursos como Mecatrônica e ADM esteja sempre correta e acessível a todos.
+> **Finalidade:** Otimizar a rotina administrativa e pedagógica, garantindo que a escala de aulas de cursos como Mecatrônica, Power BI, ADM e Lógica de Programação esteja sempre correta e acessível a todos.
 
 ---
 
 ## 🚀 Funcionalidades Principais
 
-* **Painel Administrativo (Coordenador):** Gestão de conflitos e alocação de turmas.
+* **Painel Administrativo (Coordenador):** Gestão assistida de conflitos e alocação de turmas.
 * **Portal do Docente:** Consulta de agenda e reporte de incidentes via navegador.
 * **Painel de Visão Geral (Flight Board):** Visualização pública em tempo real das salas e ocupações.
 
@@ -33,10 +37,10 @@ O **SGA** é uma solução inteligente para a gestão de espaços educacionais. 
 ---
 
 ## 🛠️ Stack Tecnológica
-* **Frontend:** HTML5, CSS3 (Design Moderno Vermelho/Cinza) e JavaScript.
-* **Backend:** C# (ASP.NET Core).
+* **Frontend:** HTML5, CSS3 e JavaScript.
+* **Backend:** C# (ASP.NET Core) e Java.
 * **Banco de Dados:** SQL Server.
-* **Arquitetura:** Web Responsiva.
+* **Arquitetura:** Web Responsiva / Gestão Assistida.
 
 ---
 *Projeto SGA - Desenvolvido para facilitar a rotina administrativa e pedagógica.*
