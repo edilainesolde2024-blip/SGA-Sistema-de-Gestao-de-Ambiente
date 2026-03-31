@@ -3,7 +3,7 @@
 ![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-red?style=for-the-badge)
 ![Linguagem](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![Frontend](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-[![Java](https://shields.io)](https://java.com)
+![Java](https://vercel.app)](https://java.com)
 
 ## 📋 Sobre o Projeto
 O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema de apoio à decisão com monitoramento centralizado e em tempo real.
