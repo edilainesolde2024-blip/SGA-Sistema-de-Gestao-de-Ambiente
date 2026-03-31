@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/NOME_DA_IMAGEM.jpeg" alt="Logo SGA" width="400">
+  <[img src="https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/NOME_DA_IMAGEM.jpeg" alt="Logo SGA" width="400](https://github.com/users/edilainesolde2024-blip/projects/3?pane=info&statusUpdateId=190904)">
   
   # SGA - Sistema de Gerenciamento de Ambientes 🏫
 </div>
