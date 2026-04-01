@@ -1,5 +1,5 @@
 <div align="center">
-   <img src="https://raw.githubusercontent.com/edilainesolde2024-blip/SGA-Sistema-de-Gestao-de-Ambiente/main/img/logo.jpeg"
+   <img src="blob:https://gemini.google.com/1a1a16b3-e5cb-4e9e-81f7-d1039b8ed13d"
   
   # SGA - Sistema de Gerenciamento de Ambientes 🏫
 </div>
