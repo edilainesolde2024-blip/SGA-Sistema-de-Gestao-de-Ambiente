@@ -25,7 +25,7 @@
 ---
 
 ## 📋 Sobre o Projeto
-O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema de **apoio à decisão** com monitoramento centralizado e em tempo real.
+O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema de apoio à decisão com monitoramento centralizado e em tempo real.
 
 > **Finalidade:** Otimizar a rotina administrativa e pedagógica, garantindo que a escala de aulas de cursos como Mecatrônica, Power BI, ADM e Lógica de Programação esteja sempre correta e acessível a todos.
 
