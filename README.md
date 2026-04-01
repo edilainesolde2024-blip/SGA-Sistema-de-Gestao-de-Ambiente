@@ -3,7 +3,7 @@
        alt="Logo - SGA" 
        style="
          max-width: 100px;
-         width: 50%;
+         width: 25%;
          height: auto;
          border-radius: 12px;
          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
