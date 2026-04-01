@@ -1,14 +1,29 @@
 <div align="center">
-   <img width="225" height="292" alt="Logo - SGA" src="https://github.com/user-attachments/assets/9cec4b45-26ec-45a7-9645-5e441546ba08" />
+  <img src="https://github.com/user-attachments/assets/9cec4b45-26ec-45a7-9645-5e441546ba08" 
+       alt="Logo - SGA" 
+       style="
+         max-width: 300px; /* Largura máxima maior para desktops */
+         width: 100%;       /* Ocupa 100% da largura do contêiner até max-width */
+         height: auto;      /* Mantém a proporção original, evitando distorção */
+         border-radius: 12px; /* Cantos arredondados sutis */
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+         margin-bottom: 20px; /* Espaço para o título */
+         border: 1px solid #ddd; /* Borda fina para dar acabamento */
+       " 
+  />
   
   # SGA - Sistema de Gerenciamento de Ambientes 🏫
+  *Centralizando a Gestão Pedagógica com Eficiência e Precisão*
 </div>
 
-![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-red?style=for-the-badge)
-![Linguagem](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
-![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Frontend](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+---
 
+<div align="center">
+  ![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-red?style=for-the-badge)
+  ![Linguagem](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+  ![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+  ![Frontend](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&page=for-the-badge&logo=html5&logoColor=white)
+</div>
 
 ## 📋 Sobre o Projeto
 O **SGA** é uma solução inteligente para a gestão de espaços educacionais. Ele substitui processos manuais de alocação de docentes e salas por um sistema de **apoio à decisão** com monitoramento centralizado e em tempo real.
