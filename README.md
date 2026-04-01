@@ -2,12 +2,12 @@
   <img src="https://github.com/user-attachments/assets/9cec4b45-26ec-45a7-9645-5e441546ba08" 
        alt="Logo - SGA" 
        style="
-         max-width: 100px;
+         max-width: 180px;
          width: 20%;
          height: auto;
-         border-radius: 50px;
+         border-radius: 10px;
          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-         margin-bottom: 20px;
+         margin-bottom: 15px;
          border: 1px solid #ddd;
        " 
   />
