@@ -5,7 +5,7 @@
          max-width: 100px;
          width: 20%;
          height: auto;
-         border-radius: 12px;
+         border-radius: 50px;
          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
          margin-bottom: 20px;
          border: 1px solid #ddd;
