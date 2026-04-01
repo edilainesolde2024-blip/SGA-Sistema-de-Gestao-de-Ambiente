@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/9cec4b45-26ec-45a7-9645-5e441546ba08" 
        alt="Logo - SGA" 
        style="
-         max-width: 300px;
+         max-width: 100px;
          width: 100%;
          height: auto;
          border-radius: 12px;
