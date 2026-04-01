@@ -12,7 +12,7 @@
        " 
   />
   
-  # SGA - Sistema de Gerenciamento de Ambientes 🏫
+  # SGA - Sistema de Gerenciamento de Ambientes 
   *Centralizando a Gestão Pedagógica com Eficiência e Precisão*
 
   ![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-red?style=for-the-badge)
