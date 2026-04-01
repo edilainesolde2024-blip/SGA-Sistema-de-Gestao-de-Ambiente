@@ -1,5 +1,5 @@
 <div align="center">
-   <img width="450" height="584" alt="Logo - SGA" src="https://github.com/user-attachments/assets/9cec4b45-26ec-45a7-9645-5e441546ba08" />
+   <img width="200" height="200" alt="Logo - SGA" src="https://github.com/user-attachments/assets/9cec4b45-26ec-45a7-9645-5e441546ba08" />
   
   # SGA - Sistema de Gerenciamento de Ambientes 🏫
 </div>
