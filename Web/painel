@@ -1,0 +1,14 @@
+<div class="card ocupado">
+    <span>Ocupadas</span>
+    <strong>12</strong>
+</div>
+
+<div class="card livre">
+    <span>Livres</span>
+    <strong>6</strong>
+</div>
+
+<div class="card manutencao">
+    <span>Manutenção</span>
+    <strong>2</strong>
+</div>
