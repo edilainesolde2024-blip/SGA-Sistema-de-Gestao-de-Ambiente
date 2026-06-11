@@ -1,0 +1,507 @@
+create database SGAv3;
+
+--1. Criação das Tabelas (DDL)
+
+create table disciplina (
+	cod serial primary key,
+	nome varchar(100) not null
+);
+
+create table turma (
+	cod serial primary key,
+	Periodo varchar(100) not null, 
+	nome varchar(100) not null,
+	tipo varchar(100) not null,
+	quant_alunos numeric(3,0)
+);
+
+create table docente (
+	cod serial primary key,
+	nome varchar(100) not null,
+	cargo varchar(100) not null
+);
+
+create table atribuicao (
+	cod serial primary key,
+	cod_disciplina integer,
+	cod_turma integer,
+	cod_docente integer,
+	FOREIGN KEY(cod_disciplina) REFERENCES disciplina(cod),
+	FOREIGN KEY(cod_turma) REFERENCES turma(cod),
+	FOREIGN KEY(cod_docente) REFERENCES docente(cod)
+);
+create table aula (
+	cod serial primary key,
+	cod_atribuicao integer,
+	descricao varchar(100) not null,
+	FOREIGN KEY(cod_atribuicao) REFERENCES atribuicao(cod)
+);
+
+create table ambiente (
+	cod serial primary key,
+	nome varchar(100) not null,
+	tipo varchar(100) not null,
+	local varchar(100) not null
+);
+
+create table horario (
+	cod serial primary key,
+	cod_aula integer,
+	cod_ambiente integer,
+	horario_inicio timestamp,
+	horario_fim timestamp,
+	FOREIGN KEY(cod_aula) REFERENCES aula(cod),
+	FOREIGN KEY(cod_ambiente) REFERENCES ambiente(cod)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--2. Inserção de Dados (DML)
+
+insert into disciplina (nome) values
+('Armz'),
+('Capus'),
+('Ciema'),
+('Cmu'),
+('Coe'),
+('Cones'),
+('Cort'),
+('Cost'),
+('Crd'),
+('Ddp'),
+('Depp'),
+('Det3D'),
+('Dist'),
+('Dme'),
+('Dpco'),
+('Eprod'),
+('Farh'),
+('Fcf'),
+('Fdmt'),
+('Fea'),
+('Finel'),
+('Fol'),
+('Fpfm'),
+('Fuao'),
+('Funci'),
+('Fundp'),
+('Funpl'),
+('Fusi'),
+('Geor'),
+('Hip'),
+('Il'),
+('Imcve'),
+('Isei'),
+('Iseli'),
+('Lec'),
+('Ledi'),
+('Lidt'),
+('Lm'),
+('Maau'),
+('Map'),
+('Maq'),
+('Matu'),
+('Mmet'),
+('Moi'),
+('Moiel'),
+('Mrg'),
+('Oea'),
+('Pfm'),
+('Plo'),
+('Ppe'),
+('Pre'),
+('Prens'),
+('Ptcn'),
+('Reem'),
+('Resce'),
+('Rlad'),
+('Roafc'),
+('Roalo'),
+('Roarh'),
+('Rspce'),
+('Seex'),
+('Selan'),
+('Seldi'),
+('Sistq'),
+('Sstr'),
+('Tmn'),
+('Tran'),
+('Trdsi'),
+('Umc'),
+('Unc');
+
+insert into turma (periodo, nome, tipo) values
+('Manhã','M1-AA-SCHA','Aprendizagem'),
+('Manhã','M1AA','Aprendizagem'),
+('Tarde','T1-AA-SABESP','Aprendizagem'),
+('Tarde','T1AA-CORREIOS','Aprendizagem'),
+('Inexistente','T1AL-CORREIOS','Aprendizagem'),
+('Manhã','M1-ALP','Aprendizagem'),
+('Integral','I1CECDR','Aprendizagem'),
+('Manhã','M2COST-EMPHASIS','Aprendizagem'),
+('Tarde','T2COST-EMPHASIS','Aprendizagem'),
+('Manhã','M1EME','Aprendizagem'),
+('Manhã','M2EME','Aprendizagem'),
+('Tarde','T1EME','Aprendizagem'),
+('Tarde','T3EME','Aprendizagem'),
+('Tarde','T2-MBMC-SUZ','Aprendizagem'),
+('Integral','I1MUECDR C','Aprendizagem'),
+('Tarde','T1-OMPMI-SCHA','Aprendizagem'),
+('Tarde','T1-OMPMI-ZF','Aprendizagem'),
+('Manhã','M2-OPFM-SCHA','Aprendizagem'),
+('Tarde','T1-OPFM-SCHA','Aprendizagem'),
+('Tarde','T2-OPFM-SCHA','Aprendizagem'),
+('Integral','I1PECDR','Aprendizagem');
+	
+insert into docente (nome, cargo) values
+('Osmar Aleixo de Lima Cruz','Instrutor de Formacao Profissional III'),
+('Wellington Benedito','Instrutor de Formacao Profissional II'),
+('Guilherme Lima Leite','Instrutor de Formacao Profissional II'),
+('Edilson Alves Dos Santos','Instrutor de Formacao Profissional III'),
+('Luciana Sayuri Fugita','Instrutor de Formacao Profissional III'),
+('Jose Rafael Claro da Silva','Instrutor de Formacao Profissional III'),
+('Wilian Luz Ribeiro','Instrutor de Formacao Profissional III'),
+('Anderson Henrique Lourenzetti Peres','Instrutor de Formacao Profissional II'),
+('Alessandro Caetano','Instrutor de Formacao Profissional III'),
+('Ronaldo Aparecido da Silva','Instrutor de Formacao Profissional II'),
+('Fabio Augusto Marius','Professor Cai'),
+('Beatriz Rosa de Brito Novaque','Assistente de Apoio Tecnico'),
+('Sandra Regina Barbosa de Souza','Instrutor de Formacao Profissional II'),
+('Simone de Souza Antunes','Instrutor de Formacao Profissional II'),
+('Janete Aparecida Luz Ribeiro','Instrutor de Formacao Profissional I'),
+('Mauricio Aparecido Nunes','Instrutor de Formacao Profissional II'),
+('Vivian Rodrigues Arrojo','Professor Cai'),
+('Andre Caetano da Silva','Instrutor de Formacao Profissional III'),
+('Samuel Martins Alavarse','Instrutor de Formacao Profissional III'),
+('Fabricio de Araujo Pelegrini','Instrutor de Formacao Profissional II'),
+('Vinicius Prado Dos Santos','Instrutor de Formacao Profissional III'),
+('Renato Pinheiro Munhoz Tomal','Instrutor de Formacao Profissional III'),
+('Emerson da Silva Santos','Instrutor de Formacao Profissional I'),
+('Suzelia Maria da Costa','Instrutor de Formacao Profissional I'),
+('Leandro Gaudio Rosa','Instrutor de Formacao Profissional III'),
+('Emerson Martins de Magalhaes','Instrutor de Formacao Profissional III'),
+('Aline Cristine de Souza','Instrutor de Formacao Profissional II'),
+('Andre Luiz Goncalves Rodrigues','Instrutor de Formacao Profissional II'),
+('Adilson Pereira da Silva','Instrutor de Formacao Profissional III'),
+('Thiago Gregorio Dos Santos','Instrutor de Formacao Profissional III'),
+('Wellington Correia Borsato Junior','Instrutor de Formacao Profissional III'),
+('Evandro Juvenal Jacinto','Instrutor de Formacao Profissional II'),
+('Luis Felipe Banhos Peres','Instrutor de Formacao Profissional III'),
+('Jose Henrique Quinteiro de Oliveira Junior','Instrutor de Formacao Profissional II'),
+('Jose Antonio Leite','Instrutor de Formacao Profissional I'),
+('Matheus Fernandes Medeiros','Instrutor de Formacao Profissional II'),
+('Grayce Kelly Delgado','Instrutor de Formacao Profissional II'),
+('Bruno Cesar Leite','Instrutor de Formacao Profissional III'),
+('Fabio Bitencourt Ribeiro','Instrutor de Formacao Profissional III'),
+('Jurandir de Campos','Instrutor de Formacao Profissional III'),
+('Adriano Rosa Mazetto','Instrutor de Formacao Profissional III'),
+('Vedilson do Prado Dos Santos','Instrutor de Formacao Profissional III'),
+('Erica Aparecida Martins Siqueira','Instrutor de Formacao Profissional III'),
+('Andre Luis de Mello Almeida Junior','Instrutor de Formacao Profissional III'),
+('Daniel Teixeira Cintori','Instrutor de Formacao Profissional III');
+
+
+
+insert into ambiente (nome, tipo, local) values
+('LAB. INFO 1','SALA','SETOR A TERREO'),
+('LAB. INFO 2','SALA','SETOR A TERREO'),
+('METROLOGIA/ENSAIOS','SALA','SETOR A TERREO'),
+('ELETRONICA/AUTOMAÇÃO','SALA','SETOR A TERREO'),
+('LABORATÓRIO DE CLP 1','SALA','SETOR A TERREO'),
+('LABORATÓRIO DE CLP 2','SALA','SETOR A TERREO'),
+('CAD/CAM 1','SALA','SETOR A TÉRREO'),
+('CAD/CAM 2','SALA','SETOR A TERREO'),
+('COORDENAÇÃO TÉCNICA/PEDAGO','SALA','SETOR A TERREO'),
+('OFICINA ELETRONICA','OFICINA','SETOR A TERREO'),
+('OFICINA ELETRICA','OFICINA','SETOR A TERREO'),
+('OFICINA CNC FERRAMENTARIA','OFICINA','SETOR A TERREO'),
+('OFICINA TORNEARIA FERRAMENTARIA','OFICINA','SETOR A TERREO'),
+('OFICINA AJUSTAGEM FERRAMENTARIA','OFICINA','SETOR A TERREO'),
+('OFICINA ESTAMPARIA FERRAMENTARIA','OFICINA','SETOR A TERREO'),
+('OFICINA AJUSTAGEM 2','OFICINA','SETOR A TERREO'),
+('OFICINA TORNEARIA 2','OFICINA','SETOR A TERREO'),
+('OFICINA CNC 2','OFICINA','SETOR A TERREO'),
+('DEPÓSITO CORREDOR ELÉTRICA','SALA','SETOR B TERREO'),
+('PLANTA INDUSTRIA 4.0','SALA','SETOR B TERREO'),
+('LAB. HIDRAULICA','SALA','SETOR B TERREO'),
+('LAB. PENEUMÁTICA','SALA','SETOR B TERREO'),
+('SALA 7-AUDITÓRIO','SALA','SETOR B TERREO'),
+('SALA 6-AUDITÓRIO - DESENHO','SALA','SETOR B TERREO'),
+('LAB. CNC','SALA','SETOR B TERREO'),
+('SALA PREPARAÇÃO DOCENTES','SALA','SETOR B TERREO'),
+('PROJETOS','SALA','SETOR B TERREO'),
+('LAB. INFO 3','SALA','SETOR B TERREO'),
+('COORDENAÇÃO SUPERIOR','SALA','SETOR B 1°. ANDAR'),
+('SALA REUNIÃO SUPERIOR','SALA','SETOR B 1°. ANDAR'),
+('LAB. AUTOMAÇÃO PREDIAL','SALA','SETOR B 1°. ANDAR'),
+('SALA 1','SALA','SETOR B 1°. ANDAR'),
+('SALA 2-AUDITÓRIO','SALA','SETOR B 1º. ANDAR'),
+('SALA 3-AUDITÓRIO','SALA','SETOR B 1°. ANDAR'),
+('SALA 4','SALA','SETOR B 1º. ANDAR'),
+('SALA 5','SALA','SETOR B 1°. ANDAR'),
+('LAB. INFO 4','SALA','SETOR B 1°. ANDAR'),
+('RESIDUOS/TAMBORES SUCATA','SALA','EXTERNO'),
+('COMPRESSORES','SALA','EXTERNO'),
+('INVERSORES','SALA','EXTERNO'),
+('DEPÓSITO ESCADA','SALA','EXTERNO'),
+('DEPÓSITO DE ÓLEO','SALA','EXTERNO'),
+('MDI','SALA','SUBSOLO'),
+('SALA ESTAGIÁRIOS','SALA','SUBSOLO'),
+('ALMOXARIFADO','SALA','SUBSOLO'),
+('MANUTENÇÃO','SALA','SUBSOLO'),
+('ZELADORIA','SALA','SUBSOLO'),
+('DEPÓSTIO FUNDOS (FLUÍDOS)','SALA','EXTERNO'),
+('SALA APOIΟ','SALA','SETOR A TERREO'),
+('SALA DE REUNIÃO 1-NÚCLEO','SALA','SUBSOLO'),
+('SALA DE REUNIÃO 1 - NÚCLEO','SALA','SUBSOLO');
+
+
+
+
+
+--EXEMPLO
+--INSERT INTO atribuicao (cod_disciplina, cod_turma, cod_docente)
+--SELECT ds.cod, tr.cod, dc.cod
+--FROM disciplina ds
+--JOIN turma tr ON tr.nome = 'I1CECDR'
+--JOIN docente dc ON dc.nome = 'Fabio Bitencourt Ribeiro'
+--WHERE ds.nome = 'Cones' AND ds.curso = 'I1CECDR';
+
+
+
+
+
+--Procedural SQL
+
+CREATE PROCEDURE AtribuirDocente(
+    IN p_nome_disciplina VARCHAR(100),
+    IN p_nome_turma VARCHAR(50),
+    IN p_nome_docente VARCHAR(100)
+)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+    -- Executa o INSERT dinâmico com base nos parâmetros recebidos
+    INSERT INTO atribuicao (cod_disciplina, cod_turma, cod_docente)
+    SELECT ds.cod, tr.cod, dc.cod
+    FROM disciplina ds
+    JOIN turma tr ON tr.nome = p_nome_turma
+    JOIN docente dc ON dc.nome = p_nome_docente
+    WHERE ds.nome = p_nome_disciplina;
+END; 
+$$;
+
+--2. Inserção de Dados (DML) através de um Procedural
+
+CALL AtribuirDocente('Cones', 'I1CECDR', 'Fabio Bitencourt Ribeiro');
+CALL AtribuirDocente('Eprod', 'I1CECDR', 'Fabio Bitencourt Ribeiro');
+CALL AtribuirDocente('Mmet', 'I1CECDR', 'Fabio Bitencourt Ribeiro');
+CALL AtribuirDocente('Pre', 'I1CECDR', 'Fabio Bitencourt Ribeiro');
+CALL AtribuirDocente('Prens', 'I1CECDR', 'Fabio Bitencourt Ribeiro');
+CALL AtribuirDocente('Det3d','I1MUECDR C','Guilherme Lima Leite');
+CALL AtribuirDocente('Dme','I1MUECDR C','Guilherme Lima Leite');
+CALL AtribuirDocente('Fusi','I1MUECDR C','Guilherme Lima Leite');
+CALL AtribuirDocente('Umc','I1MUECDR C','Guilherme Lima Leite');
+CALL AtribuirDocente('Unc','I1MUECDR C','Guilherme Lima Leite');
+
+--3. Consultas (DQL)
+
+select *from atribuicao
+
+
+
+
+
+--EXEMPLO
+--INSERT INTO aula (cod_atribuicao, descricao)
+--SELECT ac.cod, 'p_descricao'
+--FROM atribuicao ac
+--JOIN turma tr ON ac.cod_turma = tr.cod
+--JOIN docente dc ON ac.cod_docente = dc.cod
+--JOIN disciplina ds ON ac.cod_disciplina = ds.cod
+--WHERE tr.nome = 'I1MUECDR C'
+--AND dc.nome = 'Guilherme Lima Leite'
+--AND ds.nome = 'Unc';
+
+
+
+
+
+--Procedural SQL
+
+CREATE OR REPLACE PROCEDURE aula(
+    IN p_nome_disciplina VARCHAR(100),
+    IN p_nome_turma VARCHAR(50),
+    IN p_nome_docente VARCHAR(100),
+    IN p_descricao VARCHAR(100)
+)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+    -- Executa o INSERT dinâmico com base nos parâmetros recebidos
+    INSERT INTO aula (cod_atribuicao, descricao)
+    SELECT ac.cod, p_descricao
+    FROM atribuicao ac
+    JOIN turma tr ON ac.cod_turma = tr.cod
+    JOIN docente dc ON ac.cod_docente = dc.cod
+    JOIN disciplina ds ON ac.cod_disciplina = ds.cod
+	WHERE tr.nome = p_nome_turma
+	AND dc.nome = p_nome_docente
+	AND ds.nome = p_nome_disciplina;
+END; 
+$$;
+
+--2. Inserção de Dados (DML) através de um Procedural
+
+CALL aula('Cones', 'I1CECDR', 'Fabio Bitencourt Ribeiro', 'CE');
+CALL aula('Eprod', 'I1CECDR', 'Fabio Bitencourt Ribeiro', 'EP');
+CALL aula('Mmet', 'I1CECDR', 'Fabio Bitencourt Ribeiro', 'MM');
+CALL aula('Pre', 'I1CECDR', 'Fabio Bitencourt Ribeiro', 'PE');
+CALL aula('Prens', 'I1CECDR', 'Fabio Bitencourt Ribeiro', 'PRENS');
+CALL aula('Det3d','I1MUECDR C','Guilherme Lima Leite', 'DEST3D');
+CALL aula('Dme','I1MUECDR C','Guilherme Lima Leite', 'DEST');
+CALL aula('Fusi','I1MUECDR C','Guilherme Lima Leite', 'FUSI');
+CALL aula('Umc','I1MUECDR C','Guilherme Lima Leite', 'UMC');
+CALL aula('Unc','I1MUECDR C','Guilherme Lima Leite', 'UNC');
+
+--3. Consultas (DQL)
+
+select *from aula
+
+
+
+
+
+--EXEMPLO
+--INSERT INTO horario (cod_aula, horario_inicio, horario_fim, cod_ambiente)
+--SELECT al.cod, '2026-01-01 07:00:00', '2026-01-01 16:00:00', ab.cod
+--FROM aula al
+--CROSS JOIN ambiente ab
+--WHERE al.descricao = 'Pe' 
+--  AND ab.nome = 'CAD/CAM 1';
+
+
+
+
+
+--Procedural SQL
+
+CREATE OR REPLACE PROCEDURE horario(
+	IN p_descricao VARCHAR(100),
+	IN p_sala VARCHAR(100),
+	IN p_inicio timestamp,
+	IN p_fim timestamp
+)
+LANGUAGE plpgsql
+AS
+$$
+BEGIN
+    -- Executa o INSERT dinâmico com base nos parâmetros recebidos
+    INSERT INTO horario (cod_aula, horario_inicio, horario_fim, cod_ambiente)
+    SELECT al.cod, p_inicio, p_fim, ab.cod
+    FROM aula al
+    CROSS JOIN ambiente ab
+    WHERE al.descricao = p_descricao 
+      AND ab.nome = p_sala;
+END; 
+$$;
+
+--2. Inserção de Dados (DML) através de um Procedural
+
+CALL horario('CE','OFICINA CNC FERRAMENTARIA','01/01/2026 07:00:00','01/01/2026 16:00:00');
+CALL horario('EP','CAD/CAM 1','01/01/2026 07:00:00','01/01/2026 11:00:00');
+CALL horario('MM','CAD/CAM 1','01/01/2026 012:00:00','01/01/2026 11:00:00');
+CALL horario('PE','CAD/CAM 1','01/01/2026 012:00:00','01/01/2026 16:00:00');
+CALL horario('PRENS','CAD/CAM 1','01/01/2026 07:00:00','01/01/2026 16:00:00');
+CALL horario('DEST3D','SALA PREPARAÇÃO DOCENTES','01/01/2026 07:00:00','01/01/2026 11:00:00');
+CALL horario('DEST','SALA 6-AUDITÓRIO - DESENHO','01/01/2026 012:00:00','01/01/2026 16:00:00');
+CALL horario('FUSI','SALA PREPARAÇÃO DOCENTES','01/01/2026 07:00:00','01/01/2026 16:00:00');
+CALL horario('UMC','OFICINA TORNEARIA FERRAMENTARIA','01/01/2026 07:00:00','01/01/2026 16:00:00');
+CALL horario('UNC','OFICINA CNC FERRAMENTARIA','01/01/2026 07:00:00','01/01/2026 16:00:00');
+
+--3. Consultas (DQL)
+
+select *from horario
+
+
+
+
+
+--View SQL
+
+CREATE VIEW vw_turma AS
+SELECT  tu.nome as turma, ab.nome as ambiente, tu.periodo, ho.horario_inicio, ho.horario_fim
+FROM turma tu
+INNER JOIN atribuicao ac ON tu.cod = ac.cod_turma
+INNER JOIN aula al ON ac.cod = al.cod_atribuicao
+INNER JOIN horario ho ON al.cod = ho.cod_aula
+INNER JOIN ambiente ab ON ab.cod = ho.cod_ambiente
+
+--3. Consultas (DQL)
+
+select *from vw_turma
+
+
+
+
+
+--View SQL
+
+CREATE VIEW vw_ambiente AS
+SELECT  ab.nome as ambiente, tu.nome as turma, tu.periodo, ho.horario_inicio, ho.horario_fim
+FROM turma tu
+INNER JOIN atribuicao ac ON tu.cod = ac.cod_turma
+INNER JOIN aula al ON ac.cod = al.cod_atribuicao
+INNER JOIN horario ho ON al.cod = ho.cod_aula
+INNER JOIN ambiente ab ON ab.cod = ho.cod_ambiente
+
+--3. Consultas (DQL)
+
+select *from vw_ambiente
+
+
+
+
+
+--View SQL
+
+CREATE VIEW vw_atribuicao AS
+SELECT ac.cod, tu.nome as turma, ds.nome as disciplina, dc.nome as docente
+FROM disciplina ds, docente dc, turma tu, atribuicao ac
+where ds.cod = ac.cod_disciplina
+and dc.cod = ac.cod_docente
+and tu.cod = ac.cod_turma
+
+--3. Consultas (DQL)
+
+select *from vw_atribuicao
+
+
+select *from disciplina
+select *from docente
+select *from turma
+select *from atribuicao
+select *from aula
+select *from horario
+select *from ambiente
+
+select *from vw_turma
+select *from vw_ambiente
+select *from vw_atribuicao
