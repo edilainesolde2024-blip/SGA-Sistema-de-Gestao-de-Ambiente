@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+    background-image:url(coordenacao.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    min-height:100vh;
+}
+
+/* ==========================
+   LAYOUT
+========================== */
+
+body{
+    display:flex;
+}
+
+/* ==========================
+   MENU LATERAL
+========================== */
+
+.coluna_menu{
+    width:280px;
+    min-width:280px;
+
+    background:rgba(171,206,250,.78);
+    backdrop-filter:blur(5px);
+
+    display:flex;
+    flex-direction:column;
+
+    padding:25px 15px;
+
+    position:sticky;
+    top:0;
+
+    height:100vh;
+}
+
+.perfil{
+    color:#080076;
+}
+
+.perfil h3{
+    font-size:1.8rem;
+}
+
+.perfil p{
+    font-size:.85rem;
+}
+
+.menu{
+    margin-top: 30px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* ==========================
+   BOTÕES MENU
+========================== */
+
+.menu-item,
+.logout{
+    border:none;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 16px;
+
+    border-radius:15px;
+
+    background:#08007615;
+    color:#080076;
+
+    font-size:1rem;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.menu-item:hover,
+.logout:hover{
+    background:#08007630;
+}
+
+.menu-item.active{
+    background:#080076;
+    color:white;
+}
+
+.logout{
+    margin-top:auto;
+}
+
+/* ==========================
+   CONTEÚDO
+========================== */
+
+.conteudo{
+    flex:1;
+    margin-left:5px;
+    padding:20px;
+}
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 18.2vw; /* largura do menu lateral */
+    width: 82vw;
+
+    height: 80px;
+
+    background:rgba(171,206,250,.78);
+    backdrop-filter:blur(5px);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 1vw;
+
+    padding-right: 1.5vw;
+
+    z-index: 999;
+}
+
+.indicadores{
+    top: 40vh;
+}
+/* =========================
+   CAMPO DE BUSCA
+========================= */
+
+.campo-busca{
+    width: 320px;
+    min-width: 250px;
+
+    height: 45px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+    border:1px solid #ccc;
+
+    padding-left: 1vw;
+
+    font-size: 1rem;
+
+    color: #555;
+}
+
+.campo-busca::placeholder{
+    color: #666;
+}
+
+/* =========================
+   BOTÕES DOS ÍCONES
+========================= */
+
+.icone-btn{
+    width: 24px;
+    height: 24px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.icone-btn svg{
+    width: 26px;
+    height: 26px;
+}
+
+/* =========================
+   AVATAR
+========================= */
+
+.avatar-btn{
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    margin-right: 4px;
+    border-radius: 50%;
+
+    background-image: url("Docente.jpg");
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+}
+
+/* ==========================
+   ALERTAS
+========================== */
+
+.alerta{
+    background:#28236688;
+    border-radius:20px;
+
+    padding:25px;
+    
+
+    color:white;
+
+    margin-bottom:20px;
+    
+    margin-top: 10vh;
+}
+
+.alerta-titulo{
+    display:inline-flex;
+
+    background:#080060;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:15px;
+
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+.alerta-texto{
+    line-height:1.8;
+    margin-top: 20px
+}
+
+/* ==========================
+   TÍTULO
+========================== */
+
+.topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+}
+
+.topo h1{
+    color:black;
+}
+
+.relogio-container{
+    display:flex;
+    gap:15px;
+
+    border:2px solid black;
+
+    padding:10px 20px;
+
+    border-radius:10px;
+}
+
+/* ==========================
+   TABELA HORÁRIOS
+========================== */
+.container-horarios{
+    
+    margin-top:20px;
+    
+}
+
+.titulo-turma{
+    background:white;
+    padding:25px;
+
+    border-radius:20px;
+
+    font-size: 1.5rem;
+    font-weight:700;
+
+    color:black;
+
+    margin-bottom:20px;
+}
+
+.dias{
+    display:flex;
+    
+        
+    gap:-10px;
+    
+    overflow-x:auto;
+
+    padding-bottom:15px;
+}
+
+.dia-card{
+    
+
+    background:#dfe7f4;
+
+    border-radius:20px;
+    
+    margin-right: -11px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+    scale: 0.9;
+
+}
+
+.dia-titulo{
+    background:#a9c0e6;
+
+    color:#080060;
+
+    font-size:1.5rem;
+    font-weight:700;
+
+    text-align:center;
+
+    padding:18px;
+}
+
+.dia-conteudo{
+    padding:10px;
+}
+
+.dia-conteudo p{
+    color:#303080;
+
+    font-size:1.3rem;
+
+    margin-bottom:20px;
+}
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:1024px){
+
+    .coluna_menu{
+        width:230px;
+    }
+
+    .conteudo{
+        margin-left:230px;
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    body{
+        display:block;
+    }
+
+    .coluna_menu{
+         order:2;
+        margin-top: 119px;
+        width:100%;
+        min-width:100%;
+        height:auto;
+
+        position:relative;
+    }
+
+    .conteudo{
+        margin-left:0;
+        padding:15px;
+    }
+
+    /* PESQUISA ACIMA DO MENU */
+
+    .pesquisa{
+        flex-wrap:wrap;
+        order:-1;
+    }
+
+    .pesquisar{
+        width:100%;
+        flex:none;
+    }
+
+    .menu{
+        width:100%;
+    }
+
+    .menu-item{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    .topo{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .relogio-container{
+        width:100%;
+        justify-content:center;
+    }
+
+    .alerta-texto{
+        font-size:.9rem;
+        line-height:1.6;
+    }
+}
+
+/* ==========================
+   CELULAR PEQUENO
+========================== */
+
+@media (max-width:480px){
+
+    .perfil h3{
+        font-size:1.3rem;
+    }
+
+    .menu-item{
+        font-size:.9rem;
+    }
+
+    .alerta-titulo{
+        font-size:1.1rem;
+    }
+
+    .topo h1{
+        font-size:1.3rem;
+    }
+
+    .pesquisar{
+        font-size:.9rem;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    .topbar{
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        height: auto;
+
+        padding: 10px;
+    }
+
+    .campo-busca{
+        width: 90%;
+        min-width: unset;
+    }
+
+    .avatar-btn{
+        width: 50px;
+        height: 50px;
+    }
+
+    .logout{
+        margin-top: 18px;
+    }
+}

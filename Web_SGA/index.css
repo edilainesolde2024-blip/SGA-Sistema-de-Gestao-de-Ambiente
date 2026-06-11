@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Manrope",sans-serif;
+
+    background-image:url(opcao1.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+}
+
+/* ===========================
+   LAYOUT GERAL
+=========================== */
+
+.container{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:40px 5%;
+}
+
+.logo-area{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo{
+    width:300px;
+    max-width:80%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.login{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    max-width:600px;
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
+
+.bem-vindo{
+    color:#080076;
+    margin-bottom:10px;
+}
+
+.bem-vindo h2{
+    font-size:3rem;
+}
+
+.acesso{
+    color:#080076;
+    margin-bottom:30px;
+}
+
+.acesso p{
+    font-size:1.2rem;
+}
+
+/* ===========================
+   BOTÕES PERFIL
+=========================== */
+
+.botoes{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.adm,
+.coord,
+.docente{
+    width:170px;
+    height:120px;
+
+    background:#080076;
+
+    border:none;
+    border-radius:25px;
+
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.adm:hover,
+.coord:hover,
+.docente:hover{
+    transform:translateY(-4px);
+}
+
+.shield,
+.paper,
+.doc{
+    width:50px;
+    height:50px;
+    margin-bottom:10px;
+}
+
+/* ===========================
+   LABELS
+=========================== */
+
+.sn,
+.senha2{
+    color:#080060;
+    margin-bottom:8px;
+}
+
+.sn h3,
+.senha2 h3{
+    font-size:1rem;
+}
+
+/* ===========================
+   CAMPOS
+=========================== */
+
+.id,
+.codigo{
+    width:100%;
+    max-width:500px;
+
+    height:70px;
+
+    background:rgba(0,7,61,.58);
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 20px;
+
+    margin-bottom:20px;
+}
+
+.cracha,
+.block{
+    width:40px;
+    height:40px;
+
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    flex-shrink:0;
+}
+
+.cracha{
+    background-image:url(cracha.png);
+}
+
+
+.block{
+    background-image:url(senha.png);
+}
+
+.registro,
+.senha{
+    flex:1;
+
+    background:transparent;
+    border:none;
+    outline:none;
+
+    color:white;
+
+    font-size:1rem;
+    font-style: italic;
+
+    margin-left:15px;
+}
+
+.registro::placeholder,
+.senha::placeholder{
+    color:white;
+}
+
+/* ===========================
+   BOTÃO ENTRAR
+=========================== */
+
+.entrar{
+    width:100%;
+    max-width:300px;
+
+    height:70px;
+
+    background:#080060;
+
+    border:none;
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:1.3rem;
+
+    margin-top:15px;
+}
+
+.entrar span{
+    color:white;
+}
+
+/* ===========================
+   PERFIL SELECIONADO
+=========================== */
+
+.perfil-ativo{
+    background-color:#54beff65 !important;
+    border:3px solid rgb(0,21,255);
+    box-shadow:0 0 20px rgba(0,229,255,.8);
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:1024px){
+
+    .container{
+        gap:30px;
+    }
+
+    .bem-vindo h2{
+        font-size:2.3rem;
+    }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    body{
+        background-image: url(mobile.png);
+        }
+
+
+    .container{
+        flex-direction:column;
+
+        justify-content:center;
+        align-items:center;
+
+        text-align:center;
+    }
+
+        .logo{
+        position:static;
+        width:220px;
+        max-width:70%;
+    }
+
+    .logo-area{
+        margin-bottom:30px;
+    }
+
+    .login{
+        align-items:center;
+    }
+
+    .botoes{
+        justify-content:center;
+    }
+
+    .bem-vindo h2{
+        font-size:2rem;
+    }
+
+    .acesso p{
+        font-size:1rem;
+    }
+
+    .adm,
+    .coord,
+    .docente{
+        width:140px;
+        height:110px;
+    }
+
+    .id,
+    .codigo{
+        max-width:100%;
+    }
+
+    .entrar{
+        max-width:100%;
+    }
+}
