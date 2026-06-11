@@ -58,19 +58,6 @@ create table horario (
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 --2. Inserção de Dados (DML)
 
 insert into disciplina (nome) values
